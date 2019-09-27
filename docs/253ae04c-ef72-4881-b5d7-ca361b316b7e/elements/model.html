@@ -19,15 +19,27 @@
 
 <body>
 	<div class="panel panel-default root-panel">
+
 		<div class="panel-heading root-panel-heading">
-			<b>test</b>
+            <!-- Name -->
+               <b>test</b>
+
+            <!-- If a View with Viewpoint -->
 		</div>
+
 		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
 			<div role="tabpanel">
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
-					<li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
 				</ul>
 
 				<!-- Tab panes -->
@@ -48,6 +60,122 @@
 							</tbody>
 						</table>
 					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"253ae04c-ef72-4881-b5d7-ca361b316b7e", type:"ArchimateModel", name:decodeURL("test"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"253ae04c-ef72-4881-b5d7-ca361b316b7e", contentid:"9068a441-4108-4c27-a131-a7351fb80ec8", contenttype:"Folder"});
+								dataFolders.push({id:"9068a441-4108-4c27-a131-a7351fb80ec8", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"253ae04c-ef72-4881-b5d7-ca361b316b7e", contentid:"fe68f326-7c0a-414b-946f-438e2a5766b1", contenttype:"Folder"});
+								dataFolders.push({id:"fe68f326-7c0a-414b-946f-438e2a5766b1", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"253ae04c-ef72-4881-b5d7-ca361b316b7e", contentid:"065fa111-0bff-434d-bf9e-bb02aa1b30c3", contenttype:"Folder"});
+								dataFolders.push({id:"065fa111-0bff-434d-bf9e-bb02aa1b30c3", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"065fa111-0bff-434d-bf9e-bb02aa1b30c3", contentid:"f4715187-1825-43c7-a571-e0a2046fd9fe", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"f4715187-1825-43c7-a571-e0a2046fd9fe", type:"ApplicationComponent", name:decodeURL("Visma+Enterprise"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"065fa111-0bff-434d-bf9e-bb02aa1b30c3", contentid:"a1e572b5-48bc-4595-a490-1ea8de6320f1", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"a1e572b5-48bc-4595-a490-1ea8de6320f1", type:"ApplicationComponent", name:decodeURL("Visma+in+School"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"065fa111-0bff-434d-bf9e-bb02aa1b30c3", contentid:"2c30af8d-d779-45a8-96f6-12975f693853", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"2c30af8d-d779-45a8-96f6-12975f693853", type:"ApplicationComponent", name:decodeURL("Fint"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"065fa111-0bff-434d-bf9e-bb02aa1b30c3", contentid:"f3a35ba9-ced8-4363-8c7b-6064ecf0963a", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"f3a35ba9-ced8-4363-8c7b-6064ecf0963a", type:"ApplicationComponent", name:decodeURL("Timef%C3%B8ring"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"065fa111-0bff-434d-bf9e-bb02aa1b30c3", contentid:"8e258442-f534-464e-be4c-89157225d7c3", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"8e258442-f534-464e-be4c-89157225d7c3", type:"ApplicationComponent", name:decodeURL("Prosjektstyring"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"065fa111-0bff-434d-bf9e-bb02aa1b30c3", contentid:"9374b02b-130b-46e6-b041-001adeb59498", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"9374b02b-130b-46e6-b041-001adeb59498", type:"ApplicationComponent", name:decodeURL("Reiseregning%2Futlegg"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"065fa111-0bff-434d-bf9e-bb02aa1b30c3", contentid:"e4134320-8121-414d-92c7-e9c12d881612", contenttype:"ApplicationComponent"});
+										dataElements.push({id:"e4134320-8121-414d-92c7-e9c12d881612", type:"ApplicationComponent", name:decodeURL("Altinn"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"253ae04c-ef72-4881-b5d7-ca361b316b7e", contentid:"028bc384-9dd7-4c12-84c0-527df1d07ffc", contenttype:"Folder"});
+								dataFolders.push({id:"028bc384-9dd7-4c12-84c0-527df1d07ffc", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"253ae04c-ef72-4881-b5d7-ca361b316b7e", contentid:"f0ee09f0-c71c-4eee-a5cc-65e3e3105f38", contenttype:"Folder"});
+								dataFolders.push({id:"f0ee09f0-c71c-4eee-a5cc-65e3e3105f38", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"253ae04c-ef72-4881-b5d7-ca361b316b7e", contentid:"81a282dc-d157-4944-8286-6ab32d5d00d2", contenttype:"Folder"});
+								dataFolders.push({id:"81a282dc-d157-4944-8286-6ab32d5d00d2", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"253ae04c-ef72-4881-b5d7-ca361b316b7e", contentid:"03954343-063e-4c80-9436-cc225c023fba", contenttype:"Folder"});
+								dataFolders.push({id:"03954343-063e-4c80-9436-cc225c023fba", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"253ae04c-ef72-4881-b5d7-ca361b316b7e", contentid:"4fdc5f6b-ae1b-4bc3-8cca-595930ad60cb", contenttype:"Folder"});
+								dataFolders.push({id:"4fdc5f6b-ae1b-4bc3-8cca-595930ad60cb", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"4fdc5f6b-ae1b-4bc3-8cca-595930ad60cb", contentid:"fb2d4310-da23-41a8-af3d-7909bc79906e", contenttype:"FlowRelationship"});
+										dataRelationships.push({id:"fb2d4310-da23-41a8-af3d-7909bc79906e", type:"FlowRelationship", name:decodeURL("Ansatte"), documentation:decodeURL(""), sourceid:"f4715187-1825-43c7-a571-e0a2046fd9fe", targetid:"2c30af8d-d779-45a8-96f6-12975f693853"});
+									dataFoldersContent.push({folderid:"4fdc5f6b-ae1b-4bc3-8cca-595930ad60cb", contentid:"1ed2f5b1-0539-4907-8ec3-5ae20a4fdc9c", contenttype:"FlowRelationship"});
+										dataRelationships.push({id:"1ed2f5b1-0539-4907-8ec3-5ae20a4fdc9c", type:"FlowRelationship", name:decodeURL("Ansatte"), documentation:decodeURL(""), sourceid:"2c30af8d-d779-45a8-96f6-12975f693853", targetid:"a1e572b5-48bc-4595-a490-1ea8de6320f1"});
+
+								dataFoldersContent.push({folderid:"253ae04c-ef72-4881-b5d7-ca361b316b7e", contentid:"0f8fe07d-46ad-45cc-bf9d-ace89ef1c66f", contenttype:"Folder"});
+								dataFolders.push({id:"0f8fe07d-46ad-45cc-bf9d-ace89ef1c66f", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"0f8fe07d-46ad-45cc-bf9d-ace89ef1c66f", contentid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", type:"ArchimateDiagramModel", name:decodeURL("Default+View"), documentation:decodeURL("")});
+												dataViewsContent.push({viewid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contentid:"f050efb8-09de-4a8c-82a8-d2664a865549", contenttype:"DiagramModelArchimateObject"});
+												dataViewsContent.push({viewid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contentid:"f94d6f31-2f77-4a5b-b6d9-04e1be73b44e", contenttype:"DiagramModelArchimateObject"});
+												dataViewsContent.push({viewid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contentid:"a4297c54-92c8-4b37-9b95-6d0f08a621b3", contenttype:"DiagramModelArchimateObject"});
+												dataViewsContent.push({viewid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contentid:"68b3abd3-321b-4890-a57f-5d9d0eef22e0", contenttype:"DiagramModelArchimateObject"});
+												dataViewsContent.push({viewid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contentid:"a4591efc-e43f-491c-9377-7d9a5cab03d9", contenttype:"DiagramModelArchimateObject"});
+												dataViewsContent.push({viewid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contentid:"13d526fa-a0e3-414c-9c5a-eea1e67b4910", contenttype:"DiagramModelArchimateObject"});
+												dataViewsContent.push({viewid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contentid:"9cafbae2-463c-4b7d-8094-1cf859486554", contenttype:"DiagramModelArchimateObject"});
+
+																		dataViewsContent.push({viewid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contentid:"6dba1c7b-89f7-477b-bb56-2d9564a7db47", contenttype:"DiagramModelArchimateConnection"});
+
+																		dataViewsContent.push({viewid:"ad6c5afa-6203-44a3-8b6c-c8c5333e2322", contentid:"942f50df-3886-4097-a694-13dd31255f51", contenttype:"DiagramModelArchimateConnection"});
+
+
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
 			  </div>
 			</div>
 		</div>

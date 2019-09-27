@@ -19,25 +19,43 @@
 
 <body>
 	<div class="panel panel-default root-panel">
-		<div class="panel-heading root-panel-heading">
-			<b>Default View</b>
-			(<span class="i18n-viewpoint-"></span>)
-			<a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
-		</div>
-		<div class="panel-body root-panel-body">
-			<img class="diagram" src="../images/ad6c5afa-6203-44a3-8b6c-c8c5333e2322.png" alt="Default View" usemap="#ad6c5afa-6203-44a3-8b6c-c8c5333e2322map">
-			<map name="ad6c5afa-6203-44a3-8b6c-c8c5333e2322map">
-						<area shape="rect" coords="82,10,287,53" href="../elements/e827c808-9d38-4da8-b4a7-32353352525e.html"  target="element">
-						<area shape="rect" coords="10,88,130,143" href="../elements/7bed89f8-e91d-421d-9935-a47e9c8ea0b5.html"  target="element">
-						<area shape="rect" coords="238,88,358,143" href="../elements/6c45a0f1-ad1a-46c4-b376-c94ff650328b.html"  target="element">
 
-			</map>
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Default View</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/ad6c5afa-6203-44a3-8b6c-c8c5333e2322.png" alt="Default View" usemap="#ad6c5afa-6203-44a3-8b6c-c8c5333e2322map"/>
+			   <map name="ad6c5afa-6203-44a3-8b6c-c8c5333e2322map">
+				  		<area shape="rect" coords="346,262,635,383" href="../elements/f4715187-1825-43c7-a571-e0a2046fd9fe.html"  target="element">
+				  		<area shape="rect" coords="346,10,466,65" href="../elements/a1e572b5-48bc-4595-a490-1ea8de6320f1.html"  target="element">
+				  		<area shape="rect" coords="346,118,466,173" href="../elements/2c30af8d-d779-45a8-96f6-12975f693853.html"  target="element">
+				  		<area shape="rect" coords="178,10,298,65" href="../elements/f3a35ba9-ced8-4363-8c7b-6064ecf0963a.html"  target="element">
+				  		<area shape="rect" coords="826,10,946,65" href="../elements/8e258442-f534-464e-be4c-89157225d7c3.html"  target="element">
+				  		<area shape="rect" coords="10,10,130,65" href="../elements/9374b02b-130b-46e6-b041-001adeb59498.html"  target="element">
+				  		<area shape="rect" coords="1174,10,1294,65" href="../elements/e4134320-8121-414d-92c7-e9c12d881612.html"  target="element">
+
+			   </map>
+
 			<div role="tabpanel">
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
-					<li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
-					<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
 				</ul>
 
 				<!-- Tab panes -->
@@ -58,22 +76,83 @@
 							</tbody>
 						</table>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="elements">
-						<table class="table table-striped table-hover table-condensed">
-							<thead>
-								<tr>
-									<th class="i18n-name"></th>
-									<th class="i18n-type"></th>
-								</tr>
-							</thead>
-							<tbody>
-										<tr><td> <a href="../elements/e827c808-9d38-4da8-b4a7-32353352525e.html" target="element"> Mer prestisjefylte og interessante oppdrag </a> </td><td class="i18n-elementtype-Goal"></td></tr>
-										<tr><td> <a href="../elements/7bed89f8-e91d-421d-9935-a47e9c8ea0b5.html" target="element"> Markedsf&#248;ring </a> </td><td class="i18n-elementtype-Capability"></td></tr>
-										<tr><td> <a href="../elements/6c45a0f1-ad1a-46c4-b376-c94ff650328b.html" target="element"> Innsalg </a> </td><td class="i18n-elementtype-Capability"></td></tr>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/f4715187-1825-43c7-a571-e0a2046fd9fe.html" target="element"> Visma Enterprise </a> </td>
+											    <td> <a href="../elements/f4715187-1825-43c7-a571-e0a2046fd9fe.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
 
-							</tbody>
-						</table>
-					</div>
+											<tr>
+											    <td> <a href="../elements/a1e572b5-48bc-4595-a490-1ea8de6320f1.html" target="element"> Visma in School </a> </td>
+											    <td> <a href="../elements/a1e572b5-48bc-4595-a490-1ea8de6320f1.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/2c30af8d-d779-45a8-96f6-12975f693853.html" target="element"> Fint </a> </td>
+											    <td> <a href="../elements/2c30af8d-d779-45a8-96f6-12975f693853.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/f3a35ba9-ced8-4363-8c7b-6064ecf0963a.html" target="element"> Timef&#248;ring </a> </td>
+											    <td> <a href="../elements/f3a35ba9-ced8-4363-8c7b-6064ecf0963a.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/8e258442-f534-464e-be4c-89157225d7c3.html" target="element"> Prosjektstyring </a> </td>
+											    <td> <a href="../elements/8e258442-f534-464e-be4c-89157225d7c3.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/9374b02b-130b-46e6-b041-001adeb59498.html" target="element"> Reiseregning/utlegg </a> </td>
+											    <td> <a href="../elements/9374b02b-130b-46e6-b041-001adeb59498.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/e4134320-8121-414d-92c7-e9c12d881612.html" target="element"> Altinn </a> </td>
+											    <td> <a href="../elements/e4134320-8121-414d-92c7-e9c12d881612.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/fb2d4310-da23-41a8-af3d-7909bc79906e.html" target="element"> Ansatte </a> </td>
+																		<td> <a href="../elements/fb2d4310-da23-41a8-af3d-7909bc79906e.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																		<td> <a href="../elements/f4715187-1825-43c7-a571-e0a2046fd9fe.html" target="element"> Visma Enterprise </a> </td>
+																		<td> <a href="../elements/2c30af8d-d779-45a8-96f6-12975f693853.html" target="element"> Fint </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/1ed2f5b1-0539-4907-8ec3-5ae20a4fdc9c.html" target="element"> Ansatte </a> </td>
+																		<td> <a href="../elements/1ed2f5b1-0539-4907-8ec3-5ae20a4fdc9c.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																		<td> <a href="../elements/2c30af8d-d779-45a8-96f6-12975f693853.html" target="element"> Fint </a> </td>
+																		<td> <a href="../elements/a1e572b5-48bc-4595-a490-1ea8de6320f1.html" target="element"> Visma in School </a> </td>
+																	</tr>
+
+
+								</tbody>
+							</table>
+						</div>
 			  </div>
 			</div>
 		</div>
