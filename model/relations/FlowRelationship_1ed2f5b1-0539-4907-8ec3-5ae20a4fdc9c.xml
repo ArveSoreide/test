@@ -1,0 +1,12 @@
+<archimate:FlowRelationship
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="Ansatte"
+    id="1ed2f5b1-0539-4907-8ec3-5ae20a4fdc9c">
+  <source
+      xsi:type="archimate:ApplicationComponent"
+      href="ApplicationComponent_2c30af8d-d779-45a8-96f6-12975f693853.xml#2c30af8d-d779-45a8-96f6-12975f693853"/>
+  <target
+      xsi:type="archimate:ApplicationComponent"
+      href="ApplicationComponent_a1e572b5-48bc-4595-a490-1ea8de6320f1.xml#a1e572b5-48bc-4595-a490-1ea8de6320f1"/>
+</archimate:FlowRelationship>
