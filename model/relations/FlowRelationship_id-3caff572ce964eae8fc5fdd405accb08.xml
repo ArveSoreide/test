@@ -1,0 +1,12 @@
+<archimate:FlowRelationship
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="Konto"
+    id="id-3caff572ce964eae8fc5fdd405accb08">
+  <source
+      xsi:type="archimate:ApplicationComponent"
+      href="ApplicationComponent_f4715187-1825-43c7-a571-e0a2046fd9fe.xml#f4715187-1825-43c7-a571-e0a2046fd9fe"/>
+  <target
+      xsi:type="archimate:ApplicationComponent"
+      href="ApplicationComponent_8e258442-f534-464e-be4c-89157225d7c3.xml#8e258442-f534-464e-be4c-89157225d7c3"/>
+</archimate:FlowRelationship>
